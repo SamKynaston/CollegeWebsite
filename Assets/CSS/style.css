@@ -1,0 +1,399 @@
+:root {
+  --main-colour: #141212;
+  --main-padding: 6px;
+  --main-padding-2: 12px;
+  --main-padding-mobile: 24px;
+  --main-margin: 3px;
+  --main-text: #FFF;
+
+  --secondary-colour: #22242f;
+  --third-colour: rgb(49, 40, 40);
+
+  --border-radius: 8px;
+  --border-colour: ##ffffff;
+  --border-size: 2px;
+
+  --nav-margin-per-itm: 8px;
+  --nav-main-padding: 10px;
+  --nav-border-colour: var(--secondary-colour);
+  --nav-back-colour: #211c1c;
+
+  --box-padding: 12px;
+  
+  --hero-padding: 128px;
+  --hero-text-margin: 32px;
+  
+  --h1-font-size:32px;
+  --h1-margin-size:16px;
+
+  --h2-font-size: 22px;
+  --h2-margin-size: 16px;
+
+  --p-font-size: 12px;
+  --p-width-size: 6px;
+
+  --link-colour: var(--main-text);
+  --link-hover-colour: #dcd6ff;
+  --link-animation-time: 0.2s;
+}
+
+body {
+  font-family: "Segoe UI";
+  color: var(--main-text);
+  background-color: var(--nav-back-colour);
+  /*padding: var(--main-padding);*/
+  margin:0px;
+  text-align: center;
+}
+
+nav#course-options {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+a.nav-content:hover, a.footer-content:hover {
+  color:#FFF;
+  background-color: var(--secondary-colour);
+  text-decoration: none;
+  transition: background-color var(--link-animation-time) ease;
+}
+
+.hero {
+  display:none;
+  padding:var(--hero-padding);
+  /*border-radius: var(--border-radius);
+  margin-top: var(--main-margin);
+  margin-bottom: var(--main-margin);*/
+  text-align: center;
+}
+
+.hero h1, h2, p {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 0;
+}
+.hero-content #advertisement-text {
+  margin-top: var(--h2-margin-size);
+}
+
+.hero.mountains {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("https://www.burnleyexpress.net/webimg/QVNIMTE0OTY1NTE3.jpg");
+  background-position: center;
+}
+
+.hero.active {
+  display:block;
+}
+
+.hero.mountains-2 {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("https://www.burnley.ac.uk/wp-content/uploads/2020/10/Campus-Exterior-16-09-20-Burnley-College-Richard-Tymon-9-min-scaled.jpg");
+  background-position: center;
+}
+  
+.hero.mountains-3 {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("http://www.grc-gbgroup.co.uk/wp-content/uploads/Burnley-Jul-11.jpg");
+}
+  
+.hero.mountains-4 {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("https://www.burnley.ac.uk/wp-content/uploads/2022/08/Fitness-Evo-elite-performance.jpg");
+}
+
+.hero.mountains-5 {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("https://media.istockphoto.com/id/1090261942/photo/applicant-filling-in-company-application-form-document-applying-for-job-or-registering-claim.jpg?s=612x612&w=0&k=20&c=fBWlCx5tFTdbvs8EgYAYkSeRd_LIVNMEWxMtzRowE_E=");
+}
+
+.hero.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/*@keyframes fade {
+  0% {transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}*/
+
+@keyframes fade {
+  0% {opacity: .2; }
+  100% { transform: 1; }
+}
+  
+.hero-content {
+  margin: var(--hero-text-margin);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--main-colour);
+  border-radius: 50%;
+  
+  display: inline-block;
+  transition: background-color 0.4s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: var(--secondary-colour);
+}
+
+section.content {
+  padding-top: var(--main-padding-2);
+  padding-bottom: var(--main-padding-2);
+  padding-right: var(--main-padding-2);
+  padding-left: var(--main-padding-2);
+}
+
+section.content ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+section.content ul li {
+  width: auto;
+  margin: 10px;
+}
+  
+@media only screen and (max-width: 1023px) {
+  .nav-content, .footer-content {
+    display:block;
+    width:100%;
+  }
+
+  section.content {
+    background-color: var(--main-colour);
+  }
+
+  .social {
+    display: flex !important;
+  }
+
+  nav, footer {
+    background-color: var(--nav-back-colour);
+    /*border-style: solid;
+    border-width: var(--border-size);
+    border-color: var(--nav-border-colour);
+    border-radius: var(--border-radius);*/
+  
+    display: block;
+    z-index:99;
+  }
+
+  section.columns {
+    width:auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    display: block;
+  }
+
+  box, .box {
+    background-color: inherit;
+    border-color: var(--nav-back-colour);
+  }
+
+  .icon {
+    padding: 6px;
+    font-size: 64px;
+    margin: 12px;
+  }
+
+  nav > .nav-content-right, footer > .footer-content-right {
+    margin-left: auto;
+  }
+  
+  nav > .nav-content-left, footer > .footer-content-left {
+    margin-right: auto;
+  }
+  
+  nav > .nav-content-center, footer > .footer-content-center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .nav-content-center > .nav-content, .footer-content-center > .footer-content {
+    margin-left: var(--nav-margin-per-itm);
+    margin-right: var(--nav-margin-per-itm);
+  }
+  
+  .nav-content, .footer-content {
+    display:block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: var(--main-padding-mobile);
+    text-decoration: none;
+  }
+  
+  .nav-content-left, .nav-content-right, .nav-content-center, .footer-content-center, .footer-content-left, .footer-content-right {
+    width:100%;
+    flex-flow: row wrap;
+    display: block;
+  }
+
+  input, select, option {
+    margin:8px;
+    padding:var(--main-padding-mobile);
+    width: 80%;
+  }
+}
+  
+@media only screen and (min-width: 1024px) {
+  section.content {
+    background-color: var(--main-colour);
+  }
+
+  section.columns {
+    width:auto;
+    flex-flow: row wrap;
+    display: flex;
+    gap:10px;
+  }
+
+  nav, footer {
+    background-color: var(--nav-back-colour);
+    /*border-style: solid;
+    border-width: var(--border-size);
+    border-color: var(--nav-border-colour);
+    border-radius: var(--border-radius);*/
+  
+    display: flex;
+    z-index:99;
+  }
+
+  section.columns > .column {
+    flex: 1 1 0;
+    width:auto;
+  }
+  
+  section.columns > .column-2 {
+    flex: 2 2 0;
+    width:auto;
+  }
+  
+  section.columns > .column-3 {
+    flex: 3 2 0;
+    width:auto;
+  }
+  
+  section.columns > .column-4 {
+    flex: 4 2 0;
+    width:auto;
+  }
+
+  section.columns > .column-8 {
+    flex: 8 2 0;
+    width:auto;
+  }
+
+  box, .box {
+    background-color: var(--nav-back-colour);
+    border-color: var(--nav-back-colour);
+  }
+
+  .icon {
+    padding: 24px;
+    font-size: 64px;
+  }
+
+  nav > .nav-content-right, footer > .footer-content-right {
+    margin-left: auto;
+  }
+  
+  nav > .nav-content-left, footer > .footer-content-left {
+    margin-right: auto;
+  }
+  
+  nav > .nav-content-center, footer > .footer-content-center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .nav-content-center > .nav-content, .footer-content-center > .footer-content {
+    margin-left: var(--nav-margin-per-itm);
+    margin-right: var(--nav-margin-per-itm);
+  }
+  
+  .nav-content, .footer-content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: var(--nav-main-padding);
+    text-decoration: none;
+  }
+  
+  .nav-content-left, .nav-content-right, .nav-content-center, .footer-content-center, .footer-content-left, .footer-content-right {
+    width:auto;
+    flex-flow: row wrap;
+    display: flex;
+  }  
+
+  input, select, option {
+    margin:4px;
+    padding:8px;
+    width: 80%;
+  }
+}
+box, .box {
+  padding: var(--box-padding);
+  margin-top: var(--main-margin);
+  margin-bottom: var(--main-margin);
+  
+  border-style: solid;
+  border-width: var(--border-size);
+  border-radius: var(--border-radius);
+}
+
+footer p, nav p {
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+p, label {
+  font-size: var(--p-font-size);
+  margin-bottom: 0px;
+}
+
+p.description {
+  font-size: var(--h2-font-size);
+}
+
+h1 {
+  margin-bottom: var(--h1-margin-size);
+  margin-top:0px;
+  font-size: var(--h1-font-size);
+}
+h2 {
+  font-size: var(--h2-font-size);
+}
+a {
+  color: var(--link-colour);
+  text-decoration: none;
+  transition: color var(--link-animation-time) ease;
+}
+a:hover {
+  color: var(--link-hover-colour);
+}
+input, select, option {
+  background-color: var(--third-colour);
+  border: none;
+  color: var(--main-text);
+  text-align: center;
+}
+hr {
+  background-color: var(--secondary-colour);
+  color: var(--secondary-colour);
+  border-color: var(--secondary-colour);
+}

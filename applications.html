@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Burnley College</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href="./Assets/CSS/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/fba0e0afcd.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav>
+      <span class="nav-content-left">
+        <a class="nav-content" href="./index.html">
+          <image src="./Assets/Images/college-logo.png" height="50px"/>
+        </a>
+        <a class="nav-content" href="./about.html">About</a>
+        <a class="nav-content" href="./courses.html">Courses</a>
+      </span>
+      <!--<span class="nav-content-center">
+        <a class="nav-content" href="/">Center</a>
+      </span>-->
+      <span class="nav-content-right">
+        <a class="nav-content" href="./applications.html">Application Hub</a>
+      </span>
+    </nav>
+    
+    <section class="hero mountains-5 fade active">
+      <span class="hero-content">
+        <h1>Application Form</h1>
+      </span>
+    </section>
+
+    <section class="content" style="padding: 16px;">
+      <!--<box>-->
+        <form action="./confirmed.html">
+            <section class="box">
+                <section class="columns">
+                    <section class="column-4">
+                        <h2>Forename</h2>
+                        <input type="text" id="fname" name="fname" required>
+                    </section>
+                    <section class="column-4">
+                        <h2>Surname</h2>
+                        <input type="text" id="sname" name="sname" required>
+                    </section>
+                    <section class="column-4">
+                        <h2>Date of Birth</h2>
+                        <input type="text" id="dob" name="dob" required><br>
+                    </section>
+                </section>
+                <hr>
+                <section class="columns">
+                    <section class="column-4">
+                        <h2>Email</h2>
+                        <input type="email" id="email" name="email" required><br>
+                    </section>
+                    <section class="column-4">
+                        <h2>Home Address</h2>
+                        <input type="text" id="address" name="address" required><br>
+                    </section>
+                </section>
+                <hr>
+                <section class="columns">
+                    <section class="column-4">
+                        <h2>Telephone Number</h2>
+                        <input type="number" id="dob" name="dob"><br>
+                    </section>
+                    <section class="column-4">
+                        <h2>Phone Number</h2>
+                        <input type="number" id="dob" name="dob" required><br>
+                    </section>
+                </section>
+                <hr>
+                <section class="columns">
+                    <section class="column-4">
+                        <h2>Course</h2>
+                        <select id="courses" name="courses" required>
+                          <option value="bs">Business Studies</option>
+                          <option value="c">Computing</option>
+                          <option value="us">Uniformed Services</option>
+                        </select>
+                    </section>
+                    <section class="column-4">
+                      <h2>Level of Course</h2>
+                      <select id="level" name="level" required>
+                        <option value="l1">Level 1</option>
+                        <option value="l2">Level 2</option>
+                        <option value="l3">Level 3</option>
+                        <option value="l4">Level 3 Apprenticeship</option>
+                        <option value="l5">Degree Apprenticeship</option>
+                      </select>
+                  </section>
+                    <section class="column-4">
+                        <h2>Who referred you?</h2>
+                        <input type="text" id="refer" name="refer"><br>
+                    </section>
+                </section>
+
+                <input type="submit" value="Submit">
+            </section>
+        </form>
+      <!--</box>-->
+    </section>
+
+    <footer>
+      <span class="footer-content-left">
+        <a class="footer-content" href="/"><img src="./Assets/Images/college-logo.png" height="25px" /></a>
+        <a class="footer-content" href="./policies.html">Privacy Policy</a>
+      </span>
+      <span class="footer-content-right">
+        <a class="footer-content" href="./policies.html">Student Hub</a>
+        <p class="footer-content">Burnley College © 2022</a>
+      </span>
+    </footer>
+  </body>
+</html>
