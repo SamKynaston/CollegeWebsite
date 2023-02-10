@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Burnley College</title>
+    <title>Burnley College - Courses</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link href="./Assets/CSS/style.css" rel="stylesheet" type="text/css" />
     <script src="./Assets/Javascript/search.js"></script>
     <script src="https://kit.fontawesome.com/fba0e0afcd.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="dark">
     <nav>
       <span class="nav-content-left">
         <a class="nav-content" href="./index.html">
@@ -18,94 +18,97 @@
         </a>
         <a class="nav-content" href="./about.html">About</a>
       </span>
-      <!--<span class="nav-content-center">
-        <a class="nav-content" href="/">Center</a>
+      <!--<span class="box nav-content-center">
+        <a class="box nav-content" href="/">Center</a>
       </span>-->
       <span class="nav-content-right">
         <a class="nav-content" href="./applications.html">Application Hub</a>
       </span>
     </nav>
     
-    <section class="hero mountains fade active">
-      <span class="hero-content">
+    <section class="hero courses-background fade active">
+      <!--<span class="box hero-content">
         <h1>Burnley College</h1>
         <i><h2 id="advertisement-text">#1 College in England! (*In Formal Exam Conditions)</h2></i>
-      </span>
+      </span>-->
     </section>
 
     <section class="content" style="padding: 16px;">
-        <h1 style="font-size: 48px;">Available Courses</h1>
+        <h1 style="font-size: 48px;">Available BPS Courses</h1>
 
         <form action="">
-          <input type="text" id="search" placeholder="Find Your Next Step..." name="search" onkeyup="searchFunction()">
+          <input type="text" id="search" placeholder="Find Your Future..." name="search" onkeyup="searchFunction()">
         </form>
 
+        <h1 id="noResults" style="font-size: 48px;">No Results Found!</h1>
+
         <section class="columns parent" style="margin-top: 16px; justify-content: center;">
-            <box id="course" class="column-no-size">
+            <section class="box column-no-size w-40 course">
                 <h1>A-Level Business Studies</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L3 T-Level Business</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L2 T-Level Business</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L1 T-Level Business</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>A-Level Business Studies</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L3 T-Level Business</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L2 T-Level Business</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L1 T-Level Business</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L3 T-Level Computing</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L2 T-Level Computing</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L1 T-Level Computing</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L3 T-Level Game Design</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L2 T-Level Game Design</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
-            <box id="course" class="column-no-size">
+            </section>
+            <section class="box column-no-size w-40 course">
                 <h1>L1 T-Level Game Design</h1>
                 <a href="applications.html">➡ Apply Here</a>
-            </box>
+            </section>
         </section>
     </section>
-
+    
     <footer>
       <span class="footer-content-left">
         <a class="footer-content" href="/"><img src="./Assets/Images/college-logo.png" height="25px" /></a>
         <a class="footer-content" href="./policies.html">Privacy Policy</a>
       </span>
       <span class="footer-content-right">
+        <a class="footer-content" href="./applications.html">Application Hub</a>
         <p class="footer-content">Burnley College © 2023</a>
       </span>
     </footer>

@@ -1,26 +1,52 @@
-:root {
+body {
+  --main-text: #000;
+  --main-colour: #e4e4e4;
+  --secondary-colour: #d8d8d8;
+  --third-colour: #cccccc;
+  --fourth-colour: #bbbbbb;
+
+  --border-colour: #ffffff;
+
+  --nav-border-colour: var(--secondary-colour);
+  --nav-back-colour: var(--secondary-colour);
+  --nav-border-colour: var(--secondary-colour);
+
+  --link-colour: var(--main-text);
+  --link-hover-colour: #3413f3;
+}
+
+body.dark {
+  --main-text: #FFF;
   --main-colour: #141212;
+  --secondary-colour: #22242f;
+  --third-colour: rgb(49, 40, 40);
+  --fourth-colour: rgb(63, 49, 49);
+
+  --border-colour: #ffffff;
+
+  --nav-border-colour: var(--secondary-colour);
+  --nav-back-colour: #211c1c;
+  --nav-border-colour: var(--secondary-colour);
+
+  --link-colour: var(--main-text);
+  --link-hover-colour: #dcd6ff;
+}
+
+:root {
   --main-padding: 6px;
   --main-padding-2: 12px;
   --main-padding-mobile: 24px;
   --main-margin: 3px;
-  --main-text: #FFF;
-
-  --secondary-colour: #22242f;
-  --third-colour: rgb(49, 40, 40);
 
   --border-radius: 8px;
-  --border-colour: ##ffffff;
   --border-size: 2px;
 
   --nav-margin-per-itm: 8px;
   --nav-main-padding: 10px;
-  --nav-border-colour: var(--secondary-colour);
-  --nav-back-colour: #211c1c;
 
   --box-padding: 12px;
   
-  --hero-padding: 128px;
+  --hero-padding: 256px;
   --hero-text-margin: 32px;
   
   --h1-font-size:32px;
@@ -32,8 +58,6 @@
   --p-font-size: 12px;
   --p-width-size: 6px;
 
-  --link-colour: var(--main-text);
-  --link-hover-colour: #dcd6ff;
   --link-animation-time: 0.2s;
 }
 
@@ -52,7 +76,7 @@ nav#course-options {
 }
 
 a.nav-content:hover, a.footer-content:hover {
-  color:#FFF;
+  color:var(--link-colour);
   background-color: var(--secondary-colour);
   text-decoration: none;
   transition: background-color var(--link-animation-time) ease;
@@ -68,47 +92,35 @@ a.nav-content:hover, a.footer-content:hover {
 }
 
 .hero h1, h2, p {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   margin: 0;
 }
 .hero-content #advertisement-text {
   margin-top: var(--h2-margin-size);
 }
 
-.hero.mountains {
+.hero.main-background {
   background-size:cover;
   background-repeat: no-repeat;
-  background-image: url("https://www.burnleyexpress.net/webimg/QVNIMTE0OTY1NTE3.jpg");
+  background-image: url("../Images/college-background.jpg");
+  background-position: center;
+}
+
+.hero.courses-background {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("../Images/courses-background.jpg");
+  background-position: center;
+}
+
+.hero.apply-background {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("../Images/apply-background.jpg");
   background-position: center;
 }
 
 .hero.active {
   display:block;
-}
-
-.hero.mountains-2 {
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-image: url("https://www.burnley.ac.uk/wp-content/uploads/2020/10/Campus-Exterior-16-09-20-Burnley-College-Richard-Tymon-9-min-scaled.jpg");
-  background-position: center;
-}
-  
-.hero.mountains-3 {
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-image: url("http://www.grc-gbgroup.co.uk/wp-content/uploads/Burnley-Jul-11.jpg");
-}
-  
-.hero.mountains-4 {
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-image: url("https://www.burnley.ac.uk/wp-content/uploads/2022/08/Fitness-Evo-elite-performance.jpg");
-}
-
-.hero.mountains-5 {
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-image: url("https://media.istockphoto.com/id/1090261942/photo/applicant-filling-in-company-application-form-document-applying-for-job-or-registering-claim.jpg?s=612x612&w=0&k=20&c=fBWlCx5tFTdbvs8EgYAYkSeRd_LIVNMEWxMtzRowE_E=");
 }
 
 .hero.fade {
@@ -196,11 +208,6 @@ section.content ul li {
     display: block;
   }
 
-  box, .box {
-    background-color: inherit;
-    border-color: var(--nav-back-colour);
-  }
-
   .icon {
     padding: 6px;
     font-size: 64px;
@@ -245,6 +252,10 @@ section.content ul li {
     margin:8px;
     padding:var(--main-padding-mobile);
     width: 80%;
+  }
+
+  .w-25 {
+    width:auto;
   }
 }
   
@@ -296,11 +307,6 @@ section.content ul li {
     width:auto;
   }
 
-  box, .box {
-    background-color: var(--nav-back-colour);
-    border-color: var(--nav-back-colour);
-  }
-
   .icon {
     padding: 24px;
     font-size: 64px;
@@ -328,7 +334,6 @@ section.content ul li {
     display:flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
     padding: var(--nav-main-padding);
     text-decoration: none;
@@ -345,15 +350,10 @@ section.content ul li {
     padding:8px;
     width: 80%;
   }
-}
-box, .box {
-  padding: var(--box-padding);
-  margin-top: var(--main-margin);
-  margin-bottom: var(--main-margin);
-  
-  border-style: solid;
-  border-width: var(--border-size);
-  border-radius: var(--border-radius);
+
+  .w-40 {
+    width: 40%;
+  }
 }
 
 footer p, nav p {
@@ -387,13 +387,38 @@ a:hover {
   color: var(--link-hover-colour);
 }
 input, select, option {
+  padding:16px;
+  font-size: 16px;
   background-color: var(--third-colour);
+
+  border-style: solid;
+  border-width: var(--border-size);
+  border-radius: var(--border-radius);
+  background-color: var(--third-colour);
+  border-color: var(--third-colour);
+
   border: none;
   color: var(--main-text);
   text-align: center;
 }
 hr {
-  background-color: var(--secondary-colour);
-  color: var(--secondary-colour);
-  border-color: var(--secondary-colour);
+  background-color: var(--main-colour);
+  color: var(--main-colour);
+  border-color: var(--main-colour);
+}
+.box {
+  padding: var(--box-padding);
+  margin-top: var(--main-margin);
+  margin-bottom: var(--main-margin);
+  
+  border-style: solid;
+  border-width: var(--border-size);
+  border-radius: var(--border-radius);
+  background-color: var(--nav-back-colour);
+  border-color: var(--nav-back-colour);
+}
+img.person {
+  width: 125px;
+  height: 125px;
+  border-radius: 10%;
 }

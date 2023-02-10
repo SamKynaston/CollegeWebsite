@@ -6,11 +6,11 @@
     <title>Burnley College</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link href="./Assets/CSS/style.css" rel="stylesheet" type="text/css" />
-    <script src="./Assets/Javascript/carousel.js"></script>
+    <script src="./Assets/Javascript/theme.js"></script>
     <script src="https://kit.fontawesome.com/fba0e0afcd.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="light" onload="onLoad();">
     <nav>
       <span class="nav-content-left">
         <a class="nav-content" href="./index.html">
@@ -27,48 +27,63 @@
       </span>
     </nav>
     
-    <section class="hero mountains fade active">
-      <span class="hero-content">
+    <section class="hero main-background fade active">
+      <!--<span class="hero-content">
         <h1>Burnley College</h1>
         <i><h2 id="advertisement-text">#1 College in England! (*In Formal Exam Conditions)</h2></i>
-      </span>
+      </span>-->
     </section>
 
     <nav id="course-options">
-      <span class="nav-content-left">
+      <span class="nav-content-center">
         <a class="nav-content" href="./about.html#school-leavers">School Leaver (16-19)</a>
         <a class="nav-content" href="./apprenticeships.html">Apprentice (16+)</a>
-      </span>
-      <span class="nav-content-right">
         <a class="nav-content" href="./about.html#university">University (19+)</a>
         <a class="nav-content" href="./about.html#adults">Adult Learning (19+)</a>
       </span>
     </nav>
 
     <section class="content" style="padding: 16px;">
+      <h1 style="font-size:48px;">Welcome to Burnley College BPS! 👋</h1>
       <section class="columns">
-        <box class="column">
+        <section class="box column">
           <h1>Social Media</h1>
           <section class="columns social">
             <a href="" class="column"><i class="icon fa-brands fa-twitter"></i></a>
             <a href="" class="column"><i class="icon fa-brands fa-facebook"></i></a>
             <a href="" class="column"><i class="icon fa-brands fa-instagram"></i></a>
           </section>
-        </box>
-        <box class="column-8">
-          <h1>Welcome to Burnley College!</h1>
-          <p class="description"><b>Burnley College</b> has a proud history of providing the very best education and training for people of all ages. Our learners are at the heart of everything we do.</p>
+        </section>
+        <section class="box column-8">
+          <p class="description" style="margin-bottom: 12px;"><b>Burnley College</b> has a proud history of providing the very best education and training for people of all ages.</p>
           <section class="columns">
-            <box class="column">
-              <h1>Facilities</h1>
-              <p class="description">Our Outstanding Campus has been designed with you in mind. We are constantly investing in our £110 million Campus which lies  in the heart of Burnley. It has been designed with the learner experience at its heart, with state-of-the-art, industry standard facilities and bright, airy social spaces.</p>
-            </box>
-            <box class="column">
+            <section class="column">
+              <section class="box" style="background-color: var(--third-colour); border-color: var(--third-colour);">
+                <h1>Facilities</h1>
+                <p class="description">Our Outstanding Campus has been designed with you in mind. We are constantly investing in our £110 million Campus which lies  in the heart of Burnley. It has been designed with the learner experience at its heart, with state-of-the-art, industry standard facilities and bright, airy social spaces.</p>
+              </section>
+              <section class="box" style="background-color: var(--third-colour); border-color: var(--third-colour);">
+                <h1>Prospectus</h1>
+                <p class="description">Our College Prospectus can be found <b>below</b>.</p>
+                <section class="columns" style="margin-top: 16px;">
+                  <a href="https://issuu.com/bcmarketing/docs/bcsfc_prospectus_2022-23_final_withcover" target="_blank" class="box column" style="background-color: var(--fourth-colour); border-color: var(--fourth-colour);">
+                    <h2>Burnley College</h2>
+                  </a>
+                  <a href="https://issuu.com/bcmarketing/docs/sl-themis-industry_guide-full-digital" target="_blank" class="box column" style="background-color: var(--fourth-colour); border-color: var(--fourth-colour);">
+                    <h2>Themis</h2>
+                  </a>
+                  <a href="https://issuu.com/bcmarketing/docs/ucb-rec-prospectus_20-21-inners-final-full_prospec" target="_blank" class="box column" style="background-color: var(--fourth-colour); border-color: var(--fourth-colour);">
+                    <h2>BCUC</h2>
+                  </a>
+                </section>
+              </section>
+            </section>
+            <section class="box column" style="background-color: var(--third-colour); border-color: var(--third-colour);">
               <h1>Map</h1>
               <div style="text-decoration:none; overflow:hidden;max-width:100%;width:100%;height:400px;"><div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Burnley+College,+Princess+Way,+Burnley,+UK&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="embed-ded-maphtml" rel="nofollow" href="https://kbj9qpmy.com/hrn" id="grab-maps-authorization">Hosting Right Now</a><style>#google-maps-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
-            </box>
+            </section>
           </section>
-        </box>
+        </section>
       </section>
     </section>
 
@@ -77,7 +92,12 @@
         <a class="footer-content" href="/"><img src="./Assets/Images/college-logo.png" height="25px" /></a>
         <a class="footer-content" href="./policies.html">Privacy Policy</a>
       </span>
+      <span class="footer-content-center">
+        <span class="slider"></span>
+        <a class="footer-content" onclick="themeChange()">Toggle dark mode</a>
+      </span>
       <span class="footer-content-right">
+        <a class="footer-content" href="./applications.html">Application Hub</a>
         <p class="footer-content">Burnley College © 2023</a>
       </span>
     </footer>
